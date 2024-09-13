@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="weatherApp.MainPage">
+    <StackLayout Background="#c6f1ff">
+        <StackLayout Background="#40aacc" Margin="0,0,0,-50">
+
+            <Label x:Name="Weather" Text="" TextColor="#453232" FontSize="25" HorizontalTextAlignment="Center"/>
+            <Label x:Name="TempLable" Text="" TextColor="Black" FontSize="20" HorizontalTextAlignment="Center"/>
+            <Image x:Name ="ImageWeather" Margin="0,0,0,100"/>
+        </StackLayout>
+        <StackLayout>
+            <Frame RelativeLayout.YConstraint="-500" BackgroundColor="#f0fbff" Margin="70, 0" Padding="30" CornerRadius="15" >
+                <StackLayout>
+                    <Entry x:Name ="userInput" WidthRequest="200" Placeholder="Введите город" Background="#c1d9c882" HorizontalTextAlignment="Center"/>
+                    <Button x:Name ="getWeather" Clicked="GetWeather_Clicked" Text="Найти" Background="#d9a425" TextColor="#24221f" FontAttributes="Bold"/>
+                </StackLayout>
+            </Frame>
+            <Frame RelativeLayout.YConstraint="-500" BackgroundColor="#f0fbff" Margin="70, 0" Padding="15" CornerRadius="15">
+                <StackLayout>
+                    <Button x:Name ="GetCity" Clicked="Begin" Text="Погода в моем городе" Background="#d9a425" TextColor="#24221f" FontAttributes="Bold"/>
+                    <Label x:Name="GPS" Text="" FontAttributes="Bold" TextColor="Black" FontSize="18" HorizontalTextAlignment="Center"/>
+                </StackLayout>
+            </Frame>
+            <Label x:Name="InfoToday"  Text="Данные на сегодня:" TextColor="Black" FontSize="25" HorizontalTextAlignment="Center"/>
+            <Label x:Name="FeelLable" Text="" TextColor="Black" FontSize="18" HorizontalTextAlignment="Center"/>
+            <Label x:Name="Min_TempLable" Text="" TextColor="Black" FontSize="18" HorizontalTextAlignment="Center"/>
+            <Label x:Name="Max_TempLable" Text="" TextColor="Black" FontSize="18" HorizontalTextAlignment="Center"/>
+            <Label x:Name="WindLable" Text="" TextColor="Black" FontSize="18" HorizontalTextAlignment="Center"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
+
